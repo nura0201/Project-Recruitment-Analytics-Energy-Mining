@@ -2,7 +2,7 @@
 
 ## 📌 Project Overview
 
-This project simulates the role of a Data Analyst in the Human Capital (HR) division of an Energy & Mining company. The objective is to analyze candidate recruitment data, identify applicant characteristics, and build an interactive dashboard to support recruitment decision-making.
+This project simulates the role of a Data Analyst in the Human Capital (HR) division of an Energy & Mining company. The objective is to analyze candidate recruitment data, identify applicant characteristics, and build an interactive dashboard with Power BI to support recruitment decision-making.
 
 > **Note**
 >
@@ -16,16 +16,21 @@ The Human Capital division needs to understand the characteristics of recruitmen
 
 This project aims to answer questions such as:
 
-- Who are the dominant candidates based on demographics?
-- What skills are most commonly possessed by candidates?
-- What are the primary motivations of candidates joining the company?
-- Which recruitment channels are the most effective?
+- What is the demographic profile of candidates applying for recruitment?
+- Which provinces contribute the highest number of candidates?
+- What is the distribution of Fresh Graduates and Experienced Candidates?
+- Which recruitment channels are the most effective in attracting candidates?
+- What are the most common skills possessed by the candidates?
+- What are the primary career goals of the candidates?
+- How does the number of applications change over the recruitment period?
 
 ---
 
 ## 📂 Dataset
 
-The dataset contains **681 candidate records**.
+The dataset contains **682 candidate records**. Data cleaning included identifying and removing duplicate entries based on the **Full Name** column as the reference, which for duplicate detection. 
+
+After the cleaning process, **644 unique candidate records** remained and were used for exploratory data analysis (EDA) and Power BI dashboard development.
 
 ### Data Preparation Assumptions
 
@@ -36,7 +41,7 @@ The dataset contains **681 candidate records**.
 | Tau Seara Data Dari Mana? | Mengetahui Perusahaan Dari Mana |
 | Pekerjaan & Instansi Saat Ini | Removed |
 
-To protect participant privacy, personally identifiable information (PII) such as **Full Name, Email Address, and WhatsApp Number** has been removed from the published dataset.
+To protect participant privacy, personally identifiable information (PII) such as **Email Address, and WhatsApp Number** has been removed from the published dataset.
 
 ---
 
@@ -60,9 +65,10 @@ The following preprocessing steps were performed using Python:
 EDA was conducted to understand candidate characteristics through:
 
 - Candidate Status Distribution
-- Top 5 Candidate Domiciles
+- Top 10 Candidate Domiciles
 - Top 5 Employee Skills
 - Top 5 Target Companies
+- Applicant Trend Overtime
 
 ---
 
@@ -70,14 +76,18 @@ EDA was conducted to understand candidate characteristics through:
 
 The interactive dashboard was developed to provide recruitment insights through:
 
-- Recruitment Overview
-- Candidate Profile
-- Employee Skills Analysis
-- Recruitment Channel Analysis
+- KPI Overview
+- Candidate Status Distribution
+- Candidate Distribution by Province
+- Recruitment Source Analysis
+- Candidate Skills Analysis
+- Career Goals Analysis
+- Applicant Trend Over Time
+- Interactive Dashboard Filters (Slicers)
 
 ### Dashboard Preview
 
-*(Insert dashboard screenshots here)*
+none
 
 ---
 
@@ -98,6 +108,9 @@ The interactive dashboard was developed to provide recruitment insights through:
 ```text
 Recruitment-Analytics-Energy-Mining/
 │
+├── dashboard/
+│   └── Recruitment_Dashboard.jpeg
+│
 ├── data/
 │   ├── Database Seara Data.xlsx
 │   └── Database_Seara_Data_Clean.csv
@@ -106,24 +119,31 @@ Recruitment-Analytics-Energy-Mining/
 │   ├── cleaningdata.ipynb
 │   └── ExploratoryDataAnalysis.ipynb
 │
-├── dashboard/
-│   └── Recruitment_Dashboard.pbix
-│
-├── README.md
-│
-└── requirements.txt
+└── README.md
 ```
 
 ---
 
 ## 💡 Key Insights
 
-Example:
+- The recruitment dataset consists of 644 unique candidates after the data cleaning process, providing a reliable foundation for recruitment analysis.
+- Experienced Candidates account for the largest proportion of applicants, indicating that the recruitment process attracts more experienced professionals than fresh graduates.
+- Candidates are distributed across 34 provinces, with Central Java contributing the highest number of applicants, highlighting a key talent pool for future recruitment campaigns.
+- LinkedIn is the most effective recruitment channel, generating the highest number of candidate applications among all recruitment sources.
+- Excel is the most common skill reported by candidates, indicating a strong foundation in data processing and analysis.
+- Networking is the most common career goal among candidates, suggesting that many applicants are seeking to expand their professional connections and career opportunities.
+- Application volume fluctuated throughout the recruitment period, with the highest number of applications recorded on 18 January 2026, indicating a peak recruitment period that can help optimise future recruitment campaigns.
 
-- Most candidates are Fresh Graduates.
-- The majority of applicants come from several dominant domiciles.
-- Upskilling is the primary motivation among candidates.
 
+---
+
+🚀 Business Impact
+
+- Prioritise recruitment campaigns in provinces with the highest candidate participation.
+- Allocate recruitment budgets to the most effective recruitment channels.
+- Design hiring and onboarding strategies based on the dominant candidate profile (Fresh Graduate vs Experienced).
+- Align training and recruitment programmes with the most common candidate skill sets.
+- Schedule recruitment campaigns around peak application periods to maximise candidate reach.
 
 ---
 
@@ -135,10 +155,19 @@ Example:
 
 ---
 
-## 👤 Author
+## 👤 Author 1
 
 Siti Nur Aisyah
 
 GitHub: https://github.com/nura0201
 
 LinkedIn: https://www.linkedin.com/in/aisyahsn/
+
+## 👤 Author 2
+
+Fadia Rahmawati
+
+GitHub: https://github.com/
+
+LinkedIn: https://www.linkedin.com/in/
+
